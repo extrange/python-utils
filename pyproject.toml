@@ -1,0 +1,34 @@
+# View options here: https://python-poetry.org/docs/configuration
+[tool.poetry]
+# Change this to match the directory your project is in
+# Poetry will install your project as an editable package
+name = "my_project"
+version = "0.1"
+description = "Your project description"
+authors = ["extrange <29305375+extrange@users.noreply.github.com>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.8.2"
+pydantic-settings = "^2.4.0"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+pyright = "^1.1.375"
+ruff = "^0.5.7"
+pytest = "^8.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+# pre-commit: make pyright use the venv
+venvPath = "."
+venv = ".venv"
+
+[tool.pytest.ini_options]
+# https://docs.pytest.org/en/latest/explanation/goodpractices.html#which-import-mode
+addopts = ["--import-mode=importlib"]
