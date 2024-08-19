@@ -1,5 +1,5 @@
 # Test layouts: https://docs.pytest.org/en/latest/explanation/goodpractices.html#choosing-a-test-layout
-from python_utils.main import format_hhmmss
+from python_utils.format_hhmmss import format_hhmmss
 
 
 def test_format():

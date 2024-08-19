@@ -3,7 +3,7 @@
 # Change this to match the directory your project is in
 # Poetry will install your project as an editable package
 name = "python_utils"
-version = "1.0.0"
+version = "1.1.0"
 description = "Collection of utility functions."
 authors = ["extrange <29305375+extrange@users.noreply.github.com>"]
 readme = "README.md"
@@ -11,6 +11,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+pytest-asyncio = "^0.23.8"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
