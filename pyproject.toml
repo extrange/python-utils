@@ -3,8 +3,8 @@
 # Change this to match the directory your project is in
 # Poetry will install your project as an editable package
 name = "python_utils"
-version = "0.1"
-description = "Your project description"
+version = "1.0.0"
+description = "Collection of utility functions."
 authors = ["extrange <29305375+extrange@users.noreply.github.com>"]
 readme = "README.md"
 
