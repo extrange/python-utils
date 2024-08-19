@@ -9,10 +9,6 @@
 		"dockerfile": "../Dockerfile",
 		"target": "dev"
 	},
-	"runArgs": [
-		"--env-file",
-		"env/local.env"
-	],
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {
 			"upgradePackages": false,

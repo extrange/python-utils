@@ -2,7 +2,7 @@
 [tool.poetry]
 # Change this to match the directory your project is in
 # Poetry will install your project as an editable package
-name = "my_project"
+name = "python_utils"
 version = "0.1"
 description = "Your project description"
 authors = ["extrange <29305375+extrange@users.noreply.github.com>"]
@@ -11,8 +11,6 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-pydantic = "^2.8.2"
-pydantic-settings = "^2.4.0"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"

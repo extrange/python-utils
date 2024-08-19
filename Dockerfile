@@ -67,23 +67,3 @@ COPY . $APP_DIR
 
 # In the venv created by poetry, from PATH
 RUN pyright && pytest
-
-#--------------------
-
-FROM base AS deployment
-
-ENV PATH="$APP_DIR/.venv/bin:$PATH" \
-    PYTHONPATH=$APP_DIR/src \
-    VIRTUAL_ENV=$APP_DIR/.venv
-
-RUN useradd -ms /bin/bash --user-group -u 1000 user
-
-USER user
-
-# Copy virtual environment from builder
-COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
-
-COPY . $APP_DIR
-
-# Change as necessary
-CMD ["python", "-m", "my_project.main"]

@@ -1,6 +1,6 @@
 # Test layouts: https://docs.pytest.org/en/latest/explanation/goodpractices.html#choosing-a-test-layout
-from my_project.main import my_function
+from python_utils.main import format_hhmmss
 
 
-def test_my_function():
-    assert my_function(10, 2) == 12
+def test_format():
+    assert format_hhmmss(100) == "0:01:40"
