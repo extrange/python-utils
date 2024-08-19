@@ -17,7 +17,7 @@ pydantic-settings = "^2.4.0"
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
 pyright = "^1.1.375"
-ruff = "^0.5.7"
+ruff = "^0.6.1"
 pytest = "^8.3.2"
 
 [build-system]
