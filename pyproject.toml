@@ -16,7 +16,7 @@ pytest-asyncio = "^0.23.8"
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
 pyright = "^1.1.375"
-ruff = "^0.6.1"
+ruff = "^0.6.2"
 pytest = "^8.3.2"
 
 [build-system]
