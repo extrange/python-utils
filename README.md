@@ -4,6 +4,8 @@ Collection of various, often reused Python utility functions.
 
 All functions here are covered by tests.
 
+This library has no other dependencies other than Python.
+
 ## Usage
 
 Install:
