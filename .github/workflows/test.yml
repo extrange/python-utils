@@ -30,4 +30,6 @@ jobs:
       - name: Run tests
         run: |
           echo '# Code Coverage' >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
           uv run pytest --cov-report term --cov src >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
