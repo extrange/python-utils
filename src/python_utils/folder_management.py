@@ -1,14 +1,18 @@
-from pathlib import Path
+import logging
 import shutil
+from pathlib import Path
 
-def clear_directory(directory: Path = Path("temp")):
+_logger = logging.getLogger(__name__)
+
+
+def clear_directory(directory: Path = Path("temp")) -> None:
     """
-    Clears all files and subdirectories from the specified directory.
+    Clear all files and subdirectories from the specified directory.
 
     Usage:
 
     ```python
-    _clear_directory(Path("your_directory"))
+    clear_directory(Path("your_directory"))
     ```
     """
     for item in directory.iterdir():
@@ -18,27 +22,29 @@ def clear_directory(directory: Path = Path("temp")):
             item.unlink()
 
 
-def delete_directory(directory: Path = Path("temp")):
+def delete_directory(directory: Path = Path("temp")) -> None:
     """
-    Deletes the specified directory and its contents.
+    Delete the specified directory and its contents.
 
     Usage:
 
     ```python
-    _delete_directory(Path("your_directory"))
+    delete_directory(Path("your_directory"))
     ```
     """
     if directory.exists() and directory.is_dir():
-        print(f"Deleting {directory}...")
+        _logger.info("Deleting %s...", directory)
         shutil.rmtree(directory)
-        print(f"{directory} has been deleted.")
+        _logger.info("%s has been deleted.", directory)
     else:
-        print(f"{directory} does not exist or is not a directory.")
+        _logger.warning("%s does not exist or is not a directory.", directory)
 
 
-def create_directory(directory: Path = Path("temp")):
+def create_directory(directory: Path = Path("temp")) -> None:
     """
     Create the specified directory and its contents.
+
+    Note: this will clear all files in the directory if it already exists.
 
     Usage:
 
@@ -47,9 +53,9 @@ def create_directory(directory: Path = Path("temp")):
     ```
     """
     if directory.exists() and directory.is_dir():
-        print(f"{directory} already exists.")
+        _logger.info("%s already exists.", directory)
         clear_directory(directory)
     else:
-        print(f"Creating {directory}...")
+        _logger.info("Creating %s...", directory)
         directory.mkdir(parents=True)
-        print(f"{directory} has been created.")
+        _logger.info("%s has been created.", directory)
