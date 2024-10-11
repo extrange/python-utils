@@ -4,6 +4,9 @@ version = "1.2.0"
 description = "Collection of utility functions."
 readme = "README.md"
 requires-python = ">=3.12"
+dependencies = [
+    "pytest-cov>=5.0.0",
+]
 
 
 [tool.pyright]

@@ -28,4 +28,6 @@ jobs:
         run: uv sync --all-extras --dev
 
       - name: Run tests
-        run: uv run pytest
+        run: |
+          echo '# Code Coverage' >> $GITHUB_STEP_SUMMARY
+          uv run pytest --cov-report term --cov src >> $GITHUB_STEP_SUMMARY

@@ -26,6 +26,8 @@ from python_utils import format_hhmmss
 
 [Install `uv`](https://docs.astral.sh/uv/getting-started/installation/), then activate the venv with `source .venv/bin/activate`.
 
+Testing: `pytest --cov-report html --cov src`
+
 When making **breaking changes** (e.g. removing functions and/or making parameters incompatible), update the major version number (i.e. 1.0.0 -> 2.0.0).
 
 For compatible changes, (e.g. adding functions) update the minor version number (i.e. 1.0.0 -> 1.1.0).
